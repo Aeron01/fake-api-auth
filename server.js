@@ -26,76 +26,33 @@ function verifyToken(token) {
 }
 
 // Check if the user exists in database
-function isAuthenticated({ email, password }) {
+function isAuthenticated({ login, password }) {
   return (
     userdb.users.findIndex(
-      (user) => user.email === email && user.password === password
+      (user) => user.login === login && user.password === password
     ) !== -1
   )
 }
 
-// Register New User
 server.post("/auth/register", (req, res) => {
-  console.log("register endpoint called; request body:")
-  console.log(req.body)
-  const { email, password } = req.body
-
-  if (isAuthenticated({ email, password }) === true) {
-    const status = 401
-    const message = "Email and Password already exist"
-    res.status(status).json({ status, message })
-    return
-  }
-
-  fs.readFile("./users.json", (err, data) => {
-    if (err) {
-      const status = 401
-      const message = err
-      res.status(status).json({ status, message })
-      return
-    }
-
-    // Get current users data
-    var data = JSON.parse(data.toString())
-
-    // Get the id of last user
-    var last_item_id = data.users[data.users.length - 1].id
-
-    //Add new user
-    data.users.push({ id: last_item_id + 1, email: email, password: password }) //add some data
-    var writeData = fs.writeFile(
-      "./users.json",
-      JSON.stringify(data),
-      (err, result) => {
-        // WRITE
-        if (err) {
-          const status = 401
-          const message = err
-          res.status(status).json({ status, message })
-          return
-        }
-      }
-    )
-  })
-
-  // Create token for new user
-  const access_token = createToken({ email, password })
-  console.log("Access Token:" + access_token)
-  res.status(200).json({ access_token })
+  console.log("register endpoint called")
+  const status = 401
+  const message = "Register functionnality is disabled"
+  res.status(status).json({ status, message })
 })
 
 // Login to one of the users from ./users.json
 server.post("/auth/login", (req, res) => {
   console.log("login endpoint called; request body:")
   console.log(req.body)
-  const { email, password } = req.body
-  if (isAuthenticated({ email, password }) === false) {
+  const { login, password } = req.body
+  if (isAuthenticated({ login, password }) === false) {
     const status = 401
-    const message = "Incorrect email or password"
+    const message = "Incorrect login or password"
     res.status(status).json({ status, message })
     return
   }
-  const access_token = createToken({ email, password })
+  const access_token = createToken({ login, password })
   console.log("Access Token:" + access_token)
   res.status(200).json({ access_token })
 })

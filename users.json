@@ -1,1 +1,1 @@
-{ "users": [{ "id": 1, "email": "bruno@email.com", "password": "bruno" }] }
+{ "users": [{ "id": 1, "login": "admin", "password": "alyra" }] }

@@ -2,21 +2,16 @@
   "todos": [
     {
       "id": 1,
-      "name": "Installer backend",
-      "isCompleted": true
-    },
-    {
-      "id": 2,
       "name": "Create React App",
       "isCompleted": true
     },
     {
-      "id": 3,
+      "id": 2,
       "name": "Ajouter nouvelle tâches",
       "isCompleted": false
     },
     {
-      "id": 4,
+      "id": 3,
       "name": "Supprimer des tâches",
       "isCompleted": false
     },
