@@ -56,7 +56,7 @@ server.post("/auth/login", (req, res) => {
   console.log("Access Token:" + access_token)
   res.status(200).json({ access_token })
 })
-
+/*
 server.use(/^(?!\/auth).*$/, (req, res, next) => {
   if (
     req.headers.authorization === undefined ||
@@ -85,6 +85,7 @@ server.use(/^(?!\/auth).*$/, (req, res, next) => {
   }
 })
 
+*/
 server.use(router)
 
 server.listen(process.env.PORT || 4000, () => {
