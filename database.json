@@ -2,22 +2,22 @@
   "todos": [
     {
       "id": 1,
-      "name": "Create React App",
+      "text": "Create React App",
       "isCompleted": true
     },
     {
       "id": 2,
-      "name": "Ajouter nouvelle tâches",
+      "text": "Ajouter nouvelle tâches",
       "isCompleted": false
     },
     {
       "id": 3,
-      "name": "Supprimer des tâches",
+      "text": "Supprimer des tâches",
       "isCompleted": false
     },
     {
       "id": 4,
-      "name": "Modifier le status",
+      "text": "Modifier le status",
       "isCompleted": false
     }
   ]
