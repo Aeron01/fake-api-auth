@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>Hello!</h1>
-    <p>
-      The JSON Server is running
-      <br />
-      ✧*｡٩(ˊᗜˋ*)و✧*｡
-    </p>
-    <p>
-      You need to authenticate at <code>auth/login</code> to access the
-      <code>todos</code>
-    </p>
-    Here'are some examples what you might want to do then
-    <ul>
-      <li>list all todos: <code>GET /todos</code></li>
-      <li>add a todo <code>POST /todos</code></li>
-      <li>update a todo <code>PUT /todos/1 </code></li>
-      <li>delete a todo <code>DELETE /todos/1</code></li>
-    </ul>
 
-    <pre>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Hello!</h1>
+  <p>
+    The JSON Server is running
+    <br />
+    ✧*｡٩(ˊᗜˋ*)و✧*｡
+  </p>
+  <p>
+    Here'are some examples what you might want to do :
+  </p>
+
+  <ul>
+    <li>list all todos: <code>GET /todos</code></li>
+    <li>add a todo <code>POST /todos</code></li>
+    <li>update a todo <code>PUT /todos/1 </code></li>
+    <li>delete a todo <code>DELETE /todos/1</code></li>
+  </ul>
+
+  <pre>
 <code>
 fetch("http://localhost:4000/todos")
 </code>
 </pre>
 
-    <pre>
+  <pre>
 <code>
 fetch("http://localhost:4000/todos", {
   method: "POST",
@@ -46,7 +47,7 @@ fetch("http://localhost:4000/todos", {
 </code>
 </pre>
 
-    <pre>
+  <pre>
 <code>
 fetch("http://localhost:4000/todos/5", {
   method: "PUT",
@@ -60,7 +61,7 @@ fetch("http://localhost:4000/todos/5", {
 })
 </code>
 </pre>
-    <pre>
+  <pre>
 <code>
 fetch("http://localhost:4000/todos/5", {
   method: "DELETE",
@@ -70,5 +71,6 @@ fetch("http://localhost:4000/todos/5", {
 })
 </code>
 </pre>
-  </body>
+</body>
+
 </html>
