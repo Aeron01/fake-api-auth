@@ -11,5 +11,6 @@
   "dependencies": {
     "json-server": "^0.16.3",
     "jsonwebtoken": "^8.1.0"
-  }
+  },
+  "repository": "https://github.com/Aeron01/fake-api-auth.git"
 }
